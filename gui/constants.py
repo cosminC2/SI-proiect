@@ -1,0 +1,4 @@
+MAGIC = b"SGCM1"
+IV_LEN = 12
+TAG_LEN = 16
+
