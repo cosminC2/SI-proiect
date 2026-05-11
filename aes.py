@@ -70,7 +70,8 @@ class AESCipher:
         self._shift_rows(state)
         self._add_round_key(state, self.nr)
 
-        return Block.from_state(state).to_bytes()
+        output = Block.from_state(state).to_bytes()
+        return output
 
     def decrypt_block(self, ciphertext: bytes) -> bytes:
         state = Block.from_bytes(ciphertext).as_state()
