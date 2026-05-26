@@ -1,28 +1,8 @@
-# SI-proiect
-
-Proiect 1 - Implementare AES
-
-"Implementare AES in C/C++/C#/Java/Python
-+ aplicatie locala criptare si decriptare mesaje si fisiere cu interfata 
-+ mod de operare GCM - Galois/Counter Mode (2p)
-Fara biblioteci externe pentru algortimii de criptare"
-
-````typst
 #set document(title: "Documentatie AES si AES-GCM")
 #set page(margin: 2.2cm)
 #set text(size: 11pt)
 
 = Documentatie AES si AES-GCM
-
-== Scopul proiectului
-
-Proiectul implementeaza algoritmul AES pentru blocuri de 128 de biti si modul de operare GCM pentru criptare autentificata. Codul principal este impartit astfel:
-
-- `aes.py`: implementarea cifrului AES pe un bloc.
-- `gf256.py`: operatiile in corpul finit folosite de AES.
-- `block.py`: conversia dintre un bloc de 16 octeti si starea AES.
-- `gcm.py`: implementarea AES-GCM.
-- `gui/test_vectors_runner.py`: verificarea AES-128, AES-192, AES-256 si GCM cu vectori de test.
 
 == AES
 
@@ -490,4 +470,3 @@ Separarea pe functii face clara structura GCM:
 == Verificare
 
 Vectorii de test din `test_vectors` sunt folositi de `gui/test_vectors_runner.py`. Pentru AES se verifica atat criptarea, cat si decriptarea pentru chei de 128, 192 si 256 de biti. Pentru GCM se verifica obtinerea perechii ciphertext/tag si decriptarea autentificata.
-````
